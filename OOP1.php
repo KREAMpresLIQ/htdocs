@@ -5,15 +5,23 @@
         public $age=null;
 
         private $HairColor = "Brown";
+        public static $EyeColor = "Blue";
+        const RegisterNumber = 45454545;
 
         function __construct($sname,$fname){
             $this->surname=$sname;
             $this->firstname=$fname;
         }
 
-        public function Welcome(): void
-        {
+        /*private function EchoData(){
             echo "Welcome <br>".$this->firstname." ".$this->surname. "! <br> Right Now ".$this->age." Age! <br> Hair Color: ".$this->HairColor."!<br>";
+        }*/
+
+        public /*static*/ function Welcome(): void
+        {
+            //$this->EchoData();
+            echo "Welcome <br>".$this->firstname." ".$this->surname. "! <br> Right Now ".$this->age." Age! <br> Hair Color: ".$this->HairColor."!<br> Eye Color: ".self::$EyeColor." <br> Register Number: ".self::RegisterNumber."<br>";
+            //echo "Eye Color: ".self::$EyeColor."<br>";
         }
 
         function __destruct(){
@@ -28,8 +36,13 @@
     $person1->age=34;
     $person1->Welcome();
 */
+    /*
+    Person::$EyeColor="Fekete";
+    Person::Welcome();
+    */
 
     $person2 = new Person("Little", "Louise");
     $person2->age=34;
     $person2->Welcome();
+
 
